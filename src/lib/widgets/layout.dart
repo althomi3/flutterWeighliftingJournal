@@ -19,14 +19,22 @@ class MainLayout extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: title,
+      
+      body: Center(
+        child: SizedBox(
+              width: 768, // setting max with so that it works for smartphones and landscape tablets (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp)
+              child: Scaffold( // wraps app in scaffold within SizedBox to apply max width
+                appBar: AppBar(
+                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                title: title,
+                ),
+                body: body,
+                floatingActionButton: 
+                CustomFloatingActionButton(icon: Icon(Icons.add)),
+                bottomNavigationBar: CustomNavigationBar(),
+              ),
+        ),
       ),
-      body: body,
-      floatingActionButton: 
-        CustomFloatingActionButton(icon: Icon(Icons.add)),
-      bottomNavigationBar: CustomNavigationBar(),
     );
   }
 }
