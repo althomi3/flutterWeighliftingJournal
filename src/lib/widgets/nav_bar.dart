@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 
 class CustomNavigationBar extends StatelessWidget {
 
-  CustomNavigationBar ({super.key
-  
-  }); // constructor
+  const CustomNavigationBar ({
+    super.key 
+  }); // constant constructor
 
   //var index = 0.obs; // initiates index for navigation as a reactive var
 

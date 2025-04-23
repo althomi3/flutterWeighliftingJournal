@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'layout.dart';
+import 'add_elevated_button.dart';
+import 'form.dart';
 
 
 class ViewScreen extends StatelessWidget {
@@ -10,10 +12,17 @@ class ViewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainLayout(
-      body: Center(
-          child: Text('ViewScreen'),
-      ),
-    );
+    return Scaffold(
+      body: MainLayout(
+            body: Center(
+              child: Column(children: [
+                Text('ViewScreen'),
+                FormListWidget(),
+                CustomElevatedButton(icon: Icon(Icons.add)),
+              ],
+              ),
+            ),
+          ),
+        );
   }
 }

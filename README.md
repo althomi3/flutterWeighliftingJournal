@@ -32,6 +32,8 @@ The navigation bar was implemented with the NavigationBar class. Following best 
 Navigation was implemented with GetX to follow the approach taught at class.
 
 ## Layout
-Global layout widgets such as appBar, bory, floatingActionButton are wrapped in a separate widget to reduce code repetition and separating concerns.
+Global layout widgets such as appBar, or body are wrapped in a separate widget to reduce code repetition and separating concerns. Additionaly, max width is defined in the global layout.
+
+
 
 
