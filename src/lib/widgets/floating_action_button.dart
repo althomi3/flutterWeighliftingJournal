@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:src/widgets/create_screen.dart';
 
 class CustomFloatingActionButton extends StatelessWidget{
   const CustomFloatingActionButton({
@@ -12,7 +14,7 @@ class CustomFloatingActionButton extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      onPressed: (){} ,
+      onPressed: () => Get.toNamed("/create"),
       child: icon,
       );
   }
