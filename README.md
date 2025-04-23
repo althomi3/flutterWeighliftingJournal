@@ -1,8 +1,8 @@
 # Flutter Weighlifting Journal
 This is a mobile app developed with Flutter. The main use case is to add and view weightlifting sets to track progress.
 
-
-# Architecture: 4 Screens and CRUD Pattern
+# Assignment Requirements
+## Architecture: 4 Screens and CRUD Pattern
 There are 4 distinct views as required in the assignment.
 1. HomeScreen
 2. CreateScreen
@@ -18,6 +18,9 @@ Read: two tabs in the bottom navigation bar provide pattern that read allow the 
 Update: From the ViewScreen, the user can edit entries. The button trigger navigates the user to the view EditScreen where the user can manipulate the content and update it.
 
 Delete: The ViewScreen contains functionality to delete an entry.
+
+## Max Width
+The main use case of the app is mobile and design focus is for mobile use. Therefore, the max width is set to 768 folllwing the common breakpoint definition for smartphone devices by W3C (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
 
 
 
