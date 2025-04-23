@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'create_screen.dart';
-import 'view_screen.dart';
-import 'edit_screen.dart';
 import '../widgets/layout.dart';
+import 'add_elevated_button.dart';
 
 
 
@@ -19,12 +17,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainLayout(
-      body: Center(
-          child: Text('HomeScreen'),
-      ),
-    );
-  }
+    return Scaffold(
+      body: MainLayout(
+            body: Center(
+              child: Column(children: [
+                Text('HomeScreen'),
+                CustomElevatedButton(icon: Icon(Icons.add)),
+              ],
+              ),
+            ),
+          ),
+        );
+}
 }
 
 // Parking lot
@@ -36,4 +40,10 @@ class HomeScreen extends StatelessWidget {
     setState(() {
       _counter++;
     });
+
+    Center(
+        child: SizedBox(
+              width: 768, 
+
+    
   }*/

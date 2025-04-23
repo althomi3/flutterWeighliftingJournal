@@ -1,14 +1,23 @@
+// Package Imports
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:src/widgets/create_screen.dart';
 import 'package:src/widgets/view_screen.dart';
-import 'widgets/home_screen.dart';
 import 'package:get/get.dart';
+
+// Widget Imports
+import 'widgets/home_screen.dart';
+import 'widgets/form.dart';
+
 
 
 //------------------------------------------
 
 //APP ENTRY POINT
-void main() {
+Future <void> main() async {
+  await Hive.initFlutter();
+  await Hive.openBox("storage");
+  Get.lazyPut<FormController>(() => FormController()); // registers controller for form
   runApp(const MyApp());
 }
 
