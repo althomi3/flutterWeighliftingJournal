@@ -5,44 +5,57 @@ import 'package:hive/hive.dart';
 
 
 
-class Set {
+class LiftingSet {
 
   final String exercise;
-  final String set;
+  final String liftingset;
   final String reps;
   final String weight;
   final String notes;
 
-  Set(this.exercise, this.set, this.reps, this.weight, this.notes);
+  LiftingSet(this.exercise, this.liftingset, this.reps, this.weight, this.notes);
 
 
   Map toJson() => {
         'exercise': exercise,
-        'set': set,
+        'set': liftingset,
         'reps': reps,
         'weight': weight,
         'notes': notes,
       };
 
-  factory Set.fromJson(Map json) {
+  /*factory Set.fromJson(Map json) {
     return Set(json['exercise'], json['set'], json['reps'], json['weight'], json['notes']);
+  }*/
+
+  // this helps parsing the data in the expected format. when running the app in the browser, 
+  // the code snippet above is sufficient as the data is serialized and parsed differently in the browser
+  // in the local mac runtime, there were issues with how the OS unpacked the JSON data
+  factory LiftingSet.fromJson(Map json) {
+    return LiftingSet(
+      json['exercise']?.toString() ?? '',
+      json['set']?.toString() ?? '',
+      json['reps']?.toString() ?? '',
+      json['weight']?.toString() ?? '',
+      json['notes']?.toString() ?? '',
+    );
   }
 }
 
 class FormController{
   final storage = Hive.box("storage");
 
-  RxList sets;
+  RxList liftingsets;
 
-  FormController() : sets = [].obs {
+  FormController() : liftingsets = [].obs {
     if (storage.get('sets') == null) {
       storage.put('sets', []); // initializes set list with empty array
     }
 
-    sets.value = storage
+    liftingsets.value = storage
         .get('sets')
         .map(
-          (set) => Set.fromJson(set),
+          (liftingset) => LiftingSet.fromJson(liftingset),
         )
         .toList();
   }
@@ -50,16 +63,16 @@ class FormController{
   void _save() {
     storage.put(
       'sets',
-      sets.map((set) => set.toJson()).toList(),
+      liftingsets.map((liftingset) => liftingset.toJson()).toList(),
     );
   }
 
-  void add(Set set) {
-    sets.add(set);
+  void add(LiftingSet liftingset) {
+    liftingsets.add(liftingset);
     _save();
   }
 
-  get size => sets.length;
+  get size => liftingsets.length;
 
 
 }
@@ -73,7 +86,7 @@ class FormWidget extends StatelessWidget {
 
   _submit() {
     if (_formKey.currentState!.saveAndValidate()) {
-      Set set = Set(
+      LiftingSet liftingset = LiftingSet(
         _formKey.currentState!.value['exercise'] ?? "No exercise specified",
         _formKey.currentState!.value['set'] ?? "0",
         _formKey.currentState!.value['reps'] ?? "0",
@@ -81,7 +94,7 @@ class FormWidget extends StatelessWidget {
         _formKey.currentState!.value['notes'] ?? "None for this set",
       );
 
-      taskController.add(set);
+      taskController.add(liftingset);
       _formKey.currentState?.reset(); // resets form after submission
     }
   }
@@ -161,21 +174,3 @@ class FormWidget extends StatelessWidget {
   }
 }
 
-class FormListWidget extends StatelessWidget {
-  final formController = Get.find<FormController>();
-
-  @override
-  Widget build(BuildContext context) {
-    return Obx(
-      () => formController.size == 0
-          ? Text('No sets')
-          : Column(
-              children: formController.sets
-                  .map(
-                    (set) => Text(set.exercise),
-                  )
-                  .toList(),
-            ),
-    );
-  }
-}

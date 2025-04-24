@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:src/widgets/create_screen.dart';
 import 'package:src/widgets/view_screen.dart';
 import 'package:get/get.dart';
+import 'dart:ui';
+
 
 // Widget Imports
 import 'widgets/home_screen.dart';
@@ -28,6 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      scrollBehavior: CustomScrollBehavior(),
       initialRoute: "/",
       getPages: [
         GetPage(name: "/", page: () => HomeScreen()),
@@ -41,6 +44,15 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+//GLOBAL SCROLL BEHAVIOUR
+class CustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse, // although app is for mobile, I enabled mouse interaction for accessibility
+      };
 }
 //---------------------------------------------------------------------------
 
