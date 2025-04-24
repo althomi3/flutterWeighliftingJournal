@@ -16,7 +16,10 @@ class CreateScreen extends StatelessWidget {
             body: Center(
               child: Column(children: [
                 Text('CreateScreen'),
-                FormWidget(),
+                FormWidget(
+                  isEditScreen: false,
+                  liftingsetToEdit: null,
+                    )  // lifting set defined as null because user creates a new set in this widget 
               ],
               ),
             ),
