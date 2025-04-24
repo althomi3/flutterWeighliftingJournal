@@ -17,7 +17,7 @@ class MainLayout extends StatelessWidget{
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: 768,
+        width: 1200,
         child:
           Scaffold(
                       appBar: AppBar(

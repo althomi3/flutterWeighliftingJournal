@@ -20,7 +20,17 @@ Update: From the ViewScreen, the user can edit entries. The button trigger navig
 Delete: The ViewScreen contains functionality to delete an entry.
 
 ## Max Width
-The main use case of the app is mobile and design focus is for mobile use. Therefore, the max width is set to 768 folllwing the common breakpoint definition for smartphone devices by W3C (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
+The main use case of the app is mobile and design focus is for mobile use. Still, weightlifters might want to review their progress at home on their laptop. Therefore, the max width is set to 1200 following the common breakpoint definition for laptop devices by W3C (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
+
+## Breakpoints and Responsive Widget
+Min 2 breakpoints are required which trigger changes in the interface behaviour. The W3C definition for device breakpoints is used as a reference (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
+
+Breakpoint 1: 600 px (max width for extra small devices, min width for small devices like smartphones)
+Breakpoint 2: 768 px (min width for medium devices such as landscape tablets)
+
+The main use case for this app lies between the two breakpoints. Edge cases are devices < breakpoint 1 and > breakpoint 2. The breakpoints affect the display of the list of entries in the ViewScreen.
+
+The behaviour triggered by the breakpoints is defined via a generic responsive widget using the LayoutBuilder class. The generic responsive widget takes 3 widgets that are displayed depending on the parent widget width. In the app, the responsive widget is wrapped insides the Column of the MainLayout in the ViewScreen. Thereby, the widget's behaviour is controlled by the detected width of the MainLayout widget.
 
 
 

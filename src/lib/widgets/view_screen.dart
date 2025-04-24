@@ -19,10 +19,13 @@ class ViewScreen extends StatelessWidget {
             body: Center(
               child: Column(children: [
                 Text('ViewScreen'),
-                ResponsiveWidget(
-                  small_device: FormListWidgetSmall(), 
-                  medium_device: Text("TBA medium"), 
-                  large_device: Text("TBA large")),
+                Expanded( // expanded needed for ListView contained in FormList
+                  child: ResponsiveWidget( // responsive widget shows lifting set entries in different layouts depending on breakpoints
+                  smallDevice: FormListWidgetSmall(), 
+                  mediumDevice: FormListWidgetMedium(), 
+                  largeDevice: FormListWidgetLarge(),)
+                  ,
+                ),
                 CustomElevatedButton(icon: Icon(Icons.add)),
               ],
               ),

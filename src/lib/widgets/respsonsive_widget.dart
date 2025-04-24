@@ -6,23 +6,27 @@ import '../breakpoints.dart';
 class ResponsiveWidget extends StatelessWidget {
 
   // constructor
-  final Widget small_device;
-  final Widget medium_device;
-  final Widget large_device;
+  final Widget smallDevice;
+  final Widget mediumDevice;
+  final Widget largeDevice;
 
 
-  const ResponsiveWidget({required this.small_device, required this.medium_device, required this.large_device});
+  const ResponsiveWidget({
+    super.key,
+    required this.smallDevice, 
+    required this.mediumDevice, 
+    required this.largeDevice});
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth < Breakpoints.breakpoint_s) {
-          return small_device;
+          return smallDevice;
         } else if (constraints.maxWidth >= Breakpoints.breakpoint_s && constraints.maxWidth < Breakpoints.breakpoint_m) {
-          return medium_device;
+          return mediumDevice;
         } else {
-          return large_device;
+          return largeDevice;
         }
       },
     );
