@@ -34,6 +34,9 @@ Navigation was implemented with GetX to follow the approach taught at class.
 ## Layout
 Global layout widgets such as appBar, or body are wrapped in a separate widget to reduce code repetition and separating concerns. Additionaly, max width is defined in the global layout.
 
+## Accessibility
+Although the app is designed for mobile use, mouse interaction was enabled for accessibility reasons.
+
 
 
 
