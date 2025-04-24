@@ -10,6 +10,8 @@ import 'dart:ui';
 // Widget Imports
 import 'widgets/home_screen.dart';
 import 'widgets/form.dart';
+import 'widgets/edit_screen.dart';
+import 'widgets/custom_card.dart';
 
 
 
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/", page: () => HomeScreen()),
         GetPage(name: "/create", page: () => CreateScreen()),
         GetPage(name: "/all", page: () => ViewScreen()),
-
+        GetPage(name: "/edit/:id", page: () => EditScreen()), // navigates to view to edit data entry with specific id via path variable
       ],
       title: 'Flutter Demo', // sets title
       theme: ThemeData(
@@ -52,6 +54,7 @@ class CustomScrollBehavior extends MaterialScrollBehavior {
   Set<PointerDeviceKind> get dragDevices => {
         PointerDeviceKind.touch,
         PointerDeviceKind.mouse, // although app is for mobile, I enabled mouse interaction for accessibility
+        PointerDeviceKind.trackpad,
       };
 }
 

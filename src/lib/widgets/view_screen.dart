@@ -26,8 +26,11 @@ class ViewScreen extends StatelessWidget {
                   largeDevice: FormListWidgetLarge(),)
                   ,
                 ),
-                CustomElevatedButton(icon: Icon(Icons.add)),
-              ],
+                CustomElevatedButton(
+                  onSubmit: () => Get.toNamed("/create"),
+                  content: Icon(Icons.add),
+                ),              
+                ],
               ),
             ),
           ),
