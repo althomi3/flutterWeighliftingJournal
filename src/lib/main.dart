@@ -54,5 +54,6 @@ class CustomScrollBehavior extends MaterialScrollBehavior {
         PointerDeviceKind.mouse, // although app is for mobile, I enabled mouse interaction for accessibility
       };
 }
+
 //---------------------------------------------------------------------------
 
