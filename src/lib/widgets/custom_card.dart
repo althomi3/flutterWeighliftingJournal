@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'form.dart';
 import '../custom_styles.dart';
 
 class CardSmall extends StatelessWidget{

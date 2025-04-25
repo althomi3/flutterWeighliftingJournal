@@ -2,6 +2,10 @@
 This is a mobile app developed with Flutter. The main use case is to add and view weightlifting sets to track progress.
 
 # Assignment Requirements
+## Clear Purpose
+This app is build to support building muscle. Other training apps which overload users with tracking options and o not provide guidance towards specific training goals. This app focuses specifically on muscle growth through hypertrophy which is an established scientifically supported mechanism to grow muscle. It focuses on tracking training parameters which are then used to display statistics to the user that help monitoring the training volumne (reps x weight). Volumne is one of the key drivers for hypertrophy. Hypertrophy is the professional term that describes a muscle state where muscle growth > muscle breakdown.
+
+
 ## Architecture: 4 Screens and CRUD Pattern
 There are 4 distinct views as required in the assignment.
 1. HomeScreen
@@ -31,6 +35,14 @@ Breakpoint 2: 768 px (min width for medium devices such as landscape tablets)
 The main use case for this app lies between the two breakpoints. Edge cases are devices < breakpoint 1 and > breakpoint 2. The breakpoints affect the display of the list of entries in the ViewScreen.
 
 The behaviour triggered by the breakpoints is defined via a generic responsive widget using the LayoutBuilder class. The generic responsive widget takes 3 widgets that are displayed depending on the parent widget width. In the app, the responsive widget is wrapped insides the Column of the MainLayout in the ViewScreen. Thereby, the widget's behaviour is controlled by the detected width of the MainLayout widget.
+
+## Outlook and Improvement Opportunities
+- add time and date perspective
+    - allows users to track date and time or training
+    - provide time-bases statistics and thereby improve the quality of insights on hypertrophy. Because training breaks play and important role for muscle breakdown.
+- allow filtering
+- allow custom exercise types the user generates
+- provide data visualization for quick and understandable insights 
 
 
 

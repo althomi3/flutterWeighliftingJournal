@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/layout.dart';
 import 'add_elevated_button.dart';
 import 'package:get/get.dart';
+import 'dashboard_card.dart';
 
 // HOMESCREEN
 // Stateful with state object
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
             body: Center(
               child: Column(children: [
                 Text('HomeScreen'),
+                DashboardCardWidget(),
                 CustomElevatedButton(
                   onSubmit: () => Get.toNamed("/create"),
                   content: Icon(Icons.add),
