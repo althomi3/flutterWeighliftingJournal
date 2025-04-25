@@ -1,0 +1,29 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main  # or any branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'stable'
+      
+      - name: Install dependencies
+        run: flutter pub get
+      
+      - name: Build Flutter Web
+        run: flutter build web
+      
+      - name: Deploy to Firebase Hosting
+        uses: wzieba/Firebase-Hosting-Action@v0.6.0
+        with:
+          firebaseToken: ${{ secrets.FIREBASE_TOKEN }}

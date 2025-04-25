@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       body: MainLayout(
             body: Center(
               child: Column(children: [
-                Text('HomeScreen'),
+                Text('HomeScreen Test Github Actions'),
                 DashboardCardWidget(),
                 CustomElevatedButton(
                   onSubmit: () => Get.toNamed("/create"),

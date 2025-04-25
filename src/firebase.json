@@ -1,0 +1,48 @@
+{
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "muscle-growth-tracker-171aa",
+          "configurations": {
+            "web": "1:279444368689:web:ce21c7ea52a8a230269410"
+          }
+        }
+      },
+      "android": {
+        "default": {
+          "projectId": "muscle-growth-tracker-171aa",
+          "appId": "1:279444368689:android:2cb0992a81751de5269410",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "muscle-growth-tracker-171aa",
+          "appId": "1:279444368689:ios:ee025b8a2050912b269410",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "muscle-growth-tracker-171aa",
+          "appId": "1:279444368689:ios:ee025b8a2050912b269410",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      }
+    }
+  },
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "europe-west1"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "279444368689",
+    "project_id": "muscle-growth-tracker-171aa",
+    "storage_bucket": "muscle-growth-tracker-171aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279444368689:android:2cb0992a81751de5269410",
+        "android_client_info": {
+          "package_name": "com.example.src"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD26WrE-5ilFZBmgJvBHN1wtxpx69sR6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

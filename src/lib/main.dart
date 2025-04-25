@@ -5,6 +5,8 @@ import 'package:src/widgets/create_screen.dart';
 import 'package:src/widgets/view_screen.dart';
 import 'package:get/get.dart';
 import 'dart:ui';
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 // Widget Imports
@@ -15,6 +17,8 @@ import 'widgets/edit_screen.dart';
 //Controller Imports
 import 'controllers/form_controller.dart';
 import 'controllers/dashboard_controller.dart';
+/// // ...
+
 
 
 
@@ -23,6 +27,10 @@ import 'controllers/dashboard_controller.dart';
 
 //APP ENTRY POINT
 Future <void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+  );
   await Hive.initFlutter();
   await Hive.openBox("storage");
   Get.lazyPut<FormController>(() => FormController()); // registers controller for form
