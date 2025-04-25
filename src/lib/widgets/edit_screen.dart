@@ -3,6 +3,8 @@ import 'layout.dart';
 import 'form.dart';
 import 'package:get/get.dart';
 import 'custom_card.dart';
+import '../models/models.dart';
+import '../controllers/form_controller.dart';
 
 
 class EditScreen extends StatelessWidget {

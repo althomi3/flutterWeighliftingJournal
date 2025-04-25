@@ -9,9 +9,13 @@ import 'dart:ui';
 
 // Widget Imports
 import 'widgets/home_screen.dart';
-import 'widgets/form.dart';
 import 'widgets/edit_screen.dart';
-import 'widgets/custom_card.dart';
+
+
+//Controller Imports
+import 'controllers/form_controller.dart';
+import 'controllers/dashboard_controller.dart';
+
 
 
 
@@ -22,6 +26,7 @@ Future <void> main() async {
   await Hive.initFlutter();
   await Hive.openBox("storage");
   Get.lazyPut<FormController>(() => FormController()); // registers controller for form
+  Get.lazyPut<DashboardCardController>(()=>DashboardCardController()); // registers controller for statistics
   runApp(const MyApp());
 }
 

@@ -36,6 +36,9 @@ The main use case for this app lies between the two breakpoints. Edge cases are 
 
 The behaviour triggered by the breakpoints is defined via a generic responsive widget using the LayoutBuilder class. The generic responsive widget takes 3 widgets that are displayed depending on the parent widget width. In the app, the responsive widget is wrapped insides the Column of the MainLayout in the ViewScreen. Thereby, the widget's behaviour is controlled by the detected width of the MainLayout widget.
 
+## Statistics
+Homescreen: general volume and volume per muscle group -> serves app prupose to help guiding muscle growth over exercises
+
 ## Outlook and Improvement Opportunities
 - add time and date perspective
     - allows users to track date and time or training

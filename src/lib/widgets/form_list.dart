@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'form.dart';
+import '../controllers/form_controller.dart';
 import 'package:get/get.dart';
 import '../custom_styles.dart';
 import 'custom_card.dart';
