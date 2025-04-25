@@ -52,7 +52,7 @@ class FormWidget extends StatelessWidget {
     dashboardCardController.calculateVolumeForExercise(liftingsets, 'leg');
     dashboardCardController.calculateVolumeForExercise(liftingsets, 'back');
     
-    Get.back();
+    Get.toNamed('/all');
   }
 }
 

@@ -24,12 +24,17 @@ class DashboardCardController {
 
 
   double calculateVolume (RxList liftingsets) {
+    if (liftingsets.isEmpty) {
+      volume.value = 0.0;
+    return 0.0;
+  }
     //CALCULATE VOLUME
     // formula: volume = reps * volume
 
     // iterates over each element (form entry) in liftingsets and exracts reps variable
     // parses reps to int from String
     final repsList = liftingsets.map((e) => int.tryParse(e.reps) ?? 0).toList(); 
+    
     //print('All reps: $repsList'); // reps: [0, 0, 0, 0, 0, 1]
     ////print(liftingsets);
     //reps++; // for quick testing if method works in case there is something wrong with getting reps from DB
@@ -41,6 +46,11 @@ class DashboardCardController {
     //print('Avg reps: $avgReps');
 
     final weightList = liftingsets.map((e) => int.tryParse(e.weight) ?? 0).toList(); 
+    if (repsList.isEmpty || weightList.isEmpty) {
+      volume = 0.0.obs; // If no sets found for the exercise, set volume to 0
+      return 0.0;
+    }
+
     int sumWeight = weightList.reduce((a, b) => a + b);
     double avgeWeight = sumWeight/weightList.length;
     volume.value = avgReps * avgeWeight;
@@ -49,6 +59,10 @@ class DashboardCardController {
 
 
   double calculateVolumeForExercise(RxList liftingsets, String exerciseType) {
+    if (liftingsets.isEmpty) {
+      volumeByExerciseType[exerciseType] = 0.0.obs;  // Ensure no null entry is stored
+    return 0.0;
+  }
 
     // -- i -- for automatic calculation of volume, the method is called in formcontroler and in submit method of form itself
     // --> remember to update on changes

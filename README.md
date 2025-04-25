@@ -62,6 +62,9 @@ Global layout widgets such as appBar, or body are wrapped in a separate widget t
 ## Accessibility
 Although the app is designed for mobile use, mouse interaction was enabled for accessibility reasons.
 
+## No separate service class 
+The data service is integrated in the form controller. Due to the simplicity of the data handling, the decision was made to keep everything in the form controller. If the app were to be expanded, it would be wise to separate concerns and isolate the data handling in an own service class and / or service file.
+
 
 
 
