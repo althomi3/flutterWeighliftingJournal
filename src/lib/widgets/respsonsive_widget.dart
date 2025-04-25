@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../breakpoints.dart';
 
+
+
 // the responsive widget assesses the parent width and
 // exepcts a widget that should be displayed according to that width (e.g., small_device)
 class ResponsiveWidget extends StatelessWidget {
