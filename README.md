@@ -39,6 +39,10 @@ The behaviour triggered by the breakpoints is defined via a generic responsive w
 ## Statistics
 Homescreen: general volume and volume per muscle group -> serves app prupose to help guiding muscle growth over exercises
 
+## Persistent Data
+When running the app with the local machine, e.g., MacOS, the data is treated as persistent. You can test this by running the app, adding some entries, closing and restarting the app. 
+The persistent data were implemented with a Hive storage by using hive_ce. Since browsers like Chrome treat data a bit differently, the persistent state is not visible when you run the app with a browser such as Chrome.
+
 ## Outlook and Improvement Opportunities
 - add time and date perspective
     - allows users to track date and time or training
