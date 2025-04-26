@@ -44,8 +44,8 @@ class StageWidget extends StatelessWidget{
                           children: [
                             Padding(
                               padding: EdgeInsets.only(bottom: Style.insetXXXS), 
-                              child: Text("Build true climbing strength with weight lifting",
-                                style: TextStyle(fontSize: Style.fontH1)),
+                              child: Text("Build True Climbing Strength With Weight Lifting",
+                                style: TextStyle(fontSize: Style.fontH1, height: 1.1,)),
                                 ),
                             Padding(
                               padding: EdgeInsets.only(bottom: Style.insetXS),

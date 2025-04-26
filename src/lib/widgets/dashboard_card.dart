@@ -19,7 +19,7 @@ class DashboardCardWidget extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-                  padding: EdgeInsets.only(top: Style.insetS),
+                  padding: EdgeInsets.only(top: Style.insetS, bottom: Style.insetS),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children:[Text("Progress", style: TextStyle(fontSize: Style.fontH1),),] 

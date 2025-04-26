@@ -9,7 +9,7 @@ static final ButtonStyle secondaryButtonStyle = ElevatedButton.styleFrom(
 static final insetS = 20.0;
 static final insetXS = 14.0;
 static final contentMargin = EdgeInsets.all(16);
-static final insetXXS = EdgeInsets.all(8);
+static final insetXXS = 8.0;
 static final insetL = EdgeInsets.all(24);
 static final insetXL = 30.0;
 static final insetXXXS = 4.0;
@@ -27,5 +27,10 @@ static final colorFillPrimary = const Color.fromARGB(255, 207, 234, 225);
 static final colorFillSecondary = const Color.fromARGB(255, 249, 249, 249);
 static final colorPrimaryAction = const Color.fromARGB(255, 27, 28, 27);
 static final fontColorLight = const Color.fromARGB(255, 251, 255, 254);
+
+// Specs
+static final widthButtonMedium = 200.0;
+static final widthPromoCard = 300.0;
+
 
 }
