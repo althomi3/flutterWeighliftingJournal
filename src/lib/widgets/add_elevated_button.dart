@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../custom_styles.dart';
 
 class CustomElevatedButton extends StatelessWidget{
   const CustomElevatedButton({
@@ -14,9 +15,12 @@ class CustomElevatedButton extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: this.onSubmit,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Style.colorPrimaryAction, // Background color (use Style)
+      ),
+      onPressed: onSubmit,
       child: content,
-      );
+    );
   }
 }
 

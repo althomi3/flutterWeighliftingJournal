@@ -1,12 +1,14 @@
 // Package Imports
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:src/custom_styles.dart';
 import 'package:src/widgets/create_screen.dart';
 import 'package:src/widgets/view_screen.dart';
 import 'package:get/get.dart';
 import 'dart:ui';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 // Widget Imports
@@ -53,10 +55,36 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/all", page: () => ViewScreen()),
         GetPage(name: "/edit/:id", page: () => EditScreen()), // navigates to view to edit data entry with specific id via path variable
       ],
-      title: 'Flutter Demo', // sets title
+      title: 'Climbing Strength', // sets title
+      /*theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 255, 255)), // defines theme
+      ),*/
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple), // defines theme
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255), // screen background
+        colorScheme: ColorScheme.light(
+          primary: const Color.fromARGB(255, 255, 255, 255), // buttons, AppBars, accents
+          onPrimary: const Color.fromARGB(255, 255, 255, 255), // text on primary buttons
+          secondary: Colors.black, // secondary color (not super important here)
+          onSecondary: Colors.white,
+          surface: Colors.white,
+          onSurface: Colors.black,
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromARGB(255, 27, 28, 27), // AppBar background color
+          titleTextStyle: 
+          TextStyle(color: Colors.white,), 
+          // AppBar text color
+        ),
+        navigationBarTheme: const NavigationBarThemeData(
+        backgroundColor: Color.fromARGB(255, 224, 235, 232),
+        ),
+        textTheme: GoogleFonts.robotoTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
+      
+    
     );
   }
 }
