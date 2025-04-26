@@ -36,9 +36,19 @@ class DashboardCardWidget extends StatelessWidget{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Average Volume', style: TextStyle(fontSize: Style.fontTextM, fontWeight: FontWeight.bold),),
-                  Obx(()=>Text('Average Volume: ${dashboardCardController.volume.value}')), // reactive text which updates as soon as user 
-                  Text('Info text about volumne'),
+                  Align( // aligns card title and main content center while it keeps the info text left-aligned
+                    alignment: Alignment.center,
+                    child: Column(
+                        children: [Text('Overall Volume', style: TextStyle(fontSize: Style.fontTextM, fontWeight: FontWeight.bold),),
+                        Padding(
+                          padding: EdgeInsets.all(Style.insetS),
+                          child: Obx(()=>Text('${dashboardCardController.volume.value}', style: TextStyle(fontSize: Style.fontTextXL))), // reactive text which updates as soon as user 
+                        ),
+                        ],
+                    ),
+                  ), 
+                  Text('info: We calculate the overall average volume as based on all sets across all muscle groups.', style: TextStyle(fontSize: Style.label, fontStyle: FontStyle.italic),
+                  ),
                   ],
                 ),
               ),
@@ -53,28 +63,86 @@ class DashboardCardWidget extends StatelessWidget{
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Average Volume by Muscle Group', style: TextStyle(fontSize: Style.fontTextM, fontWeight: FontWeight.bold),),
-                        /**buttons for debugging if auto-update of volumes does not work */
-                        // ElevatedButton(onPressed: () => dashboardCardController.calculateVolumeForExercise(liftingsets, 'chest'), child: Text("calc chest"),),
-                        // ElevatedButton(onPressed: () => dashboardCardController.calculateVolumeForExercise(liftingsets, 'compound'), child: Text("calc compound"),),
-                        Obx(()=>Text('Average Volume: ${dashboardCardController.volume.value}')), // reactive text which updates as soon as user 
-                        Obx(()=>Text('Average Volume Chest: ${dashboardCardController.volumeByExerciseType['chest']}')), // reactive text which updates as soon as user 
-                        Obx(()=>Text('Average Volume Compound: ${dashboardCardController.volumeByExerciseType['compound']}')), // reactive text which updates as soon as user 
-                        Obx(()=>Text('Average Volume Back: ${dashboardCardController.volumeByExerciseType['back']}')), // reactive text which updates as soon as user
-                        Obx(()=>Text('Average Volume Leg: ${dashboardCardController.volumeByExerciseType['leg']}')), // reactive text which updates as soon as user 
-                        // adds new form entry
-                        Text('Info text about volumne'),
+                        Align(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: Style.insetXS),
+                            child: 
+                            Text(
+                                'Volume by Muscle',
+                                style: TextStyle(fontSize: Style.fontTextM, fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                                  ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: Style.insetXS, left: Style.insetXL, right: Style.insetXL), 
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row( // following logic ensures a structured presentation of the exercise statistics in a table-like format
+                                  children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Text('Compound:', style: TextStyle(fontSize: Style.fontTextL)),
+                                    ),
+                                  Expanded(
+                                    flex: 1,
+                                    child: Obx(()=>Text('${dashboardCardController.volumeByExerciseType['compound']}', style: TextStyle(fontSize: Style.fontTextL))),
+                                    ), // reactive text which updates as soon as user ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Text('Chest:', style: TextStyle(fontSize: Style.fontTextL)),
+                                    ),
+                                  Expanded(
+                                    flex: 1,
+                                    child: Obx(()=>Text('${dashboardCardController.volumeByExerciseType['chest']}', style: TextStyle(fontSize: Style.fontTextL))),
+                                    ), // reactive text which updates as soon as user ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Text('Back:', style: TextStyle(fontSize: Style.fontTextL)),
+                                    ),
+                                  Expanded(
+                                    flex: 1,
+                                    child: Obx(()=>Text('${dashboardCardController.volumeByExerciseType['back']}', style: TextStyle(fontSize: Style.fontTextL))),
+                                    ), // reactive text which updates as soon as user ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Text('Legs:', style: TextStyle(fontSize: Style.fontTextL)),
+                                    ),
+                                  Expanded(
+                                    flex: 1,
+                                    child: Obx(()=>Text('${dashboardCardController.volumeByExerciseType['leg']}', style: TextStyle(fontSize: Style.fontTextL))),
+                                    ), // reactive text which updates as soon as user ),
+                                  ],
+                                ),                               
+                                /**buttons for debugging if auto-update of volumes does not work */
+                              // ElevatedButton(onPressed: () => dashboardCardController.calculateVolumeForExercise(liftingsets, 'chest'), child: Text("calc chest"),),
+                              // ElevatedButton(onPressed: () => dashboardCardController.calculateVolumeForExercise(liftingsets, 'compound'), child: Text("calc compound"),),
+                              ],
+                            ),
+                            ), 
+                        Text('info: We calculate the average volume for each muscle group based on all sets you tracked per muscle group.', style: TextStyle(fontSize: Style.label, fontStyle: FontStyle.italic),),
                         ],
                       ),
                 ),
           ),
           ),
-          
-
-            ],
-          ),
-          ),
-          
+        ],
+      ),
+      ),    
       ],      
     );
   }

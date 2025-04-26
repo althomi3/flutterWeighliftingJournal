@@ -11,13 +11,15 @@ static final insetXS = 14.0;
 static final contentMargin = EdgeInsets.all(16);
 static final insetXXS = EdgeInsets.all(8);
 static final insetL = EdgeInsets.all(24);
+static final insetXL = 30.0;
 static final insetXXXS = 4.0;
 
 // Fontsize
-
 static final fontH1 = 24.0;
 static final fontTextM = 16.0;
-static final label = 14.0;
+static final fontTextL = 18.0;
+static final fontTextXL = 30.0;
+static final label = 12.0;
 
 // colors
 
