@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'layout.dart';
-import 'form.dart';
+import '../molecules/form.dart';
 import 'package:get/get.dart';
-import '../models/models.dart';
-import '../controllers/form_controller.dart';
-import 'molecules/custom_card_small.dart';
+import '../../models/models.dart';
+import '../../controllers/form_controller.dart';
+import '../molecules/custom_card_small.dart';
 
 
 class EditScreen extends StatelessWidget {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:src/custom_styles.dart';
 import '../atoms/edit_button.dart';
 import '../atoms/delete_button.dart';
 
@@ -14,7 +15,7 @@ class CardLarge extends StatelessWidget {
   final String buttonEditText;
   final String buttonDeleteText;
 
-  CardLarge({
+  const CardLarge({
     super.key,
     required this.title,
     required this.paramLiftingset,
@@ -43,27 +44,28 @@ class CardLarge extends StatelessWidget {
                 crossAxisAlignment:
                     CrossAxisAlignment
                         .start, // aligns the tile content to the left
-                children: [
-                  paramLiftingset,
-                  paramReps,
-                  paramWeight,
-                  paramNotes,
-                ],
+                children: [paramLiftingset, paramReps, paramWeight, paramNotes],
               ),
             ),
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              EditButton(
-                onEdit: onEdit,
-                buttonEditText: buttonEditText,
-              ),
-              DeleteButton(
-                onDelete: onDelete,
-                buttonDeleteText: buttonDeleteText,
-              ),
-            ],
+          Padding(
+            padding: EdgeInsets.all(Style.insetXS),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(right: Style.insetXS),
+                  child: EditButton(
+                    onEdit: onEdit,
+                    buttonEditText: buttonEditText,
+                  ),
+                ),
+                DeleteButton(
+                  onDelete: onDelete,
+                  buttonDeleteText: buttonDeleteText,
+                ),
+              ],
+            ),
           ),
         ],
       ),

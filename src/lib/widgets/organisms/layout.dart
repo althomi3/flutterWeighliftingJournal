@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'nav_bar.dart';
-import '../custom_styles.dart';
+import '../molecules/nav_bar.dart';
+import '../../custom_styles.dart';
 
 
 

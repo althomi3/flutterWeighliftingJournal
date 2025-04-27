@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:src/custom_styles.dart';
-import 'layout.dart';
-import 'add_elevated_button.dart';
-import 'form.dart';
+import 'organisms/layout.dart';
+import 'atoms/add_elevated_button.dart';
+import 'molecules/form.dart';
 import 'package:get/get.dart';
-import 'respsonsive_widget.dart';
+import 'molecules/respsonsive_widget.dart';
 import 'trainingset_list.dart';
 
 
@@ -29,8 +29,8 @@ class ViewScreen extends StatelessWidget {
                 Expanded( // expanded needed for ListView contained in FormList
                   child: ResponsiveWidget( // responsive widget shows lifting set entries in different layouts depending on breakpoints
                   smallDevice: FormListWidgetSmall(), 
-                  mediumDevice: FormListWidgetSmall(), 
-                  largeDevice: FormListWidgetSmall(),)
+                  mediumDevice: FormListWidgetMedium(), 
+                  largeDevice: FormListWidgetLarge(),)
                   ,
                 ),
                 SizedBox(
@@ -39,7 +39,8 @@ class ViewScreen extends StatelessWidget {
                       padding: EdgeInsets.only(bottom: Style.insetXL),
                       child: CustomElevatedButton(
                         onSubmit: () => Get.toNamed("/create"),
-                        content: Icon(Icons.add),
+                        content: Icon(Icons.add, color: Style.fontColorLight,),
+      
                       ),
                     ),
                   ),           

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/form_controller.dart';
-import '../controllers/dashboard_controller.dart';
-import '../custom_styles.dart';
+import '../../controllers/form_controller.dart';
+import '../../controllers/dashboard_controller.dart';
+import '../../custom_styles.dart';
 
 
 

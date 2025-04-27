@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 // Widgets
-import '../widgets/layout.dart';
-import 'add_elevated_button.dart';
+import 'layout.dart';
+import '../atoms/add_elevated_button.dart';
 import 'dashboard_card.dart';
-import '../custom_styles.dart';
+import '../../custom_styles.dart';
 import 'stage.dart';
 
 

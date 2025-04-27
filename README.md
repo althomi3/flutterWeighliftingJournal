@@ -6,6 +6,7 @@ This is a mobile app developed with Flutter. The main use case is to add and vie
 The widget folder is structured following the atomic design approach. It categoirzed the widgets according to their complexity, e.g., molcules for simpler widgets or organism for views that integrate mutliple widgets.
 ## Run the App
 The app is available under the folllwing URL: TBA
+It is best to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. Adjust your browser window or choose the device demo in your browser's dev tools.
 If you want to run the app via code, navigate to the src folder and start the app with <flutter run>.
 
 # Assignment Requirements
@@ -58,6 +59,7 @@ The persistent data were implemented with a Hive storage by using hive_ce. Since
 ## Easy to use and intuitive
 Navigation is kept minimalistic and actions are designed to serve the main goal of the user: tracking training sets.
 Navigation icons and labels are chosen to support the understanding of the usage of each view. It is semantically goal-focused: understanding progress and logging activities.
+The screens contain instructive elements which support the user in understanding how the app and the current step work.
 
 An empty state of the ViewScreen helps the user understand what to do and what they will see once they started tracking.
 
