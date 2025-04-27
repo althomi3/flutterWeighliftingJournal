@@ -49,6 +49,8 @@ The main use case for this app lies between the two breakpoints. Edge cases are 
 
 The behaviour triggered by the breakpoints is defined via a generic responsive widget using the LayoutBuilder class. The generic responsive widget takes 3 widgets that are displayed depending on the parent widget width. In the app, the responsive widget is wrapped insides the Column of the MainLayout in the ViewScreen. Thereby, the widget's behaviour is controlled by the detected width of the MainLayout widget.
 
+Screens are set as scrollable with SingleChildScrollView to prevent overflowing content issues cause by narrow screens which might lengthen the content more than expected.
+
 ## Statistics
 Homescreen: general volume and volume per muscle group -> serves app prupose to help guiding muscle growth over exercises
 
@@ -80,6 +82,10 @@ An empty state of the ViewScreen helps the user understand what to do and what t
     - provide video instructions and exercises for each muscle group 
 
 - Outlyering some of the homescreen content to a temporary welcome screen the user sees on app start. Thereby, the main screen focuses on functional content. This increase UX for loyal users who don't want to see static content they already learned over a long time.
+
+- Improved form functionality: 
+    - additional form validators can help users enter useful data.
+    - on edit, the form is pre-filled with user data and user can simply only adapt the fields they want to edit
 
 
 

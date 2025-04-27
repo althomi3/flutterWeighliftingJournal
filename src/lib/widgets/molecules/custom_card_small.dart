@@ -32,6 +32,7 @@ class CardSmall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Style.colorFillTertiary,
       child: Column(
         children: [
           ListTile(
@@ -44,27 +45,30 @@ class CardSmall extends StatelessWidget {
             ),
           ),
           if (!editView)
-          Padding(
-            padding: EdgeInsets.all(Style.insetXS),
-            child: Row(
-              // aligns buttons horizontally
-              mainAxisAlignment:
-                  MainAxisAlignment.start, // aligns button to right of card
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(Style.insetXXXS), 
-                  child: EditButton(onEdit: onEdit, buttonEditText: buttonEditText),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(Style.insetXXXS), 
-                  child: DeleteButton(
-                  onDelete: onDelete,
-                  buttonDeleteText: buttonDeleteText,
+            Padding(
+              padding: EdgeInsets.all(Style.insetXS),
+              child: Row(
+                // aligns buttons horizontally
+                mainAxisAlignment:
+                    MainAxisAlignment.start, // aligns button to right of card
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(Style.insetXXXS),
+                    child: EditButton(
+                      onEdit: onEdit,
+                      buttonEditText: buttonEditText,
+                    ),
                   ),
-                ),              
-              ],
+                  Padding(
+                    padding: EdgeInsets.all(Style.insetXXXS),
+                    child: DeleteButton(
+                      onDelete: onDelete,
+                      buttonDeleteText: buttonDeleteText,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            ),          
         ],
       ),
     );

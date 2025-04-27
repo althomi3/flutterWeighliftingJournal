@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'layout.dart';
 import '../molecules/form.dart';
 import '../../custom_styles.dart';
+import '../molecules/info_sections.dart';
+import '../atoms/promo_cards.dart';
 
 class CreateScreen extends StatelessWidget {
   const CreateScreen({super.key}); // sets key for public class HomeScreen
@@ -10,31 +12,29 @@ class CreateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: MainLayout(
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-
             children: [
               Padding(
-                padding: EdgeInsets.only(
-                  top: Style.insetXS,
-                  bottom: Style.insetXS,
-                ),
+                padding: EdgeInsets.only(bottom: Style.insetXXS),
                 child: Text(
                   "Log Your Training",
                   style: TextStyle(fontSize: Style.fontH1),
                 ),
               ),
-              Text("How it works", style: TextStyle(fontSize: Style.fontTextL)),
-
               Padding(
-                padding: EdgeInsets.only(
-                  top: Style.insetXS,
-                  bottom: Style.insetXL,
-                ),
+                padding: EdgeInsets.only(bottom: Style.insetXXS),
                 child: Text(
-                  "During your training, you track each set. You might have seen others around your gym documenting their training with pen and paper. This works exactly the same. Just that we make it a bit easier and less messy with this handy form.",
+                  "This form helps you tracking your training intentionally to build muscle strength. For example, you train your glutes with 3 sets of squats. Log each of the sets individually. ",
                   style: TextStyle(fontSize: Style.fontTextM),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: Style.insetL),
+                child: Text(
+                  "Pro Tipp: Track after each set. It feels great to log achievements and gives you flexibility to adjust the weight or reps during the set. ",
+                  style: TextStyle(fontSize: Style.label),
                 ),
               ),
 
@@ -42,6 +42,15 @@ class CreateScreen extends StatelessWidget {
                 isEditScreen: false,
                 liftingsetToEdit: null,
               ), // lifting set defined as null because user creates a new set in this widget
+              InfoSectionWidgetMuscles(),
+              Padding(
+                padding: EdgeInsets.only(bottom: Style.insetXXS),
+                child: PromoCardWidget(
+                  title: "📣 Coming Soon: Exercise Guide",
+                  subtitle:
+                      "Find exercises that you like and that build strength the strength you want.",
+                ),
+              ),
             ],
           ),
         ),
