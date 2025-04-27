@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'layout.dart';
 import 'form.dart';
 import 'package:get/get.dart';
-import 'custom_card.dart';
 import '../models/models.dart';
 import '../controllers/form_controller.dart';
+import 'molecules/custom_card_small.dart';
 
 
 class EditScreen extends StatelessWidget {
@@ -38,6 +38,8 @@ class EditScreen extends StatelessWidget {
                         onDelete: () { 
                           formController.delete(updatedliftingset);  // Call delete function
                         },
+                        buttonEditText: "No text needed as buttons are hidde, but param is required by widget",
+                        buttonDeleteText: "No text needed as buttons are hidde, but param is required by widget",
                         ),
                    FormWidget(
                     isEditScreen: true,

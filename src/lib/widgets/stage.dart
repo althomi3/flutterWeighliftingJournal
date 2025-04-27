@@ -28,7 +28,7 @@ class StageWidget extends StatelessWidget{
                             aspectRatio: 1, // aspect ratio lets image scale without adding padding from maxheight which is set above
                             child: SvgPicture.asset(
                                 'assets/13317058_5215746.svg',
-                                semanticsLabel: 'My SVG Image',
+                                semanticsLabel: 'Climbing woman',
                                 fit: BoxFit.contain
                               ),
                           ) 

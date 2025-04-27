@@ -1,42 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:src/controllers/navigation_controller.dart';
 
 class CustomNavigationBar extends StatelessWidget {
-
-  const CustomNavigationBar ({
-    super.key 
-  }); // constant constructor
-
-  //var index = 0.obs; // initiates index for navigation as a reactive var
-
+  final navigationController = Get.find<NavigationController>();
 
   @override
   Widget build(BuildContext context) {
-    return NavigationBar(
+    return Obx(
+      () => NavigationBar(
+        // defines navigation logic based on destination index
+        onDestinationSelected: (int index) {
+          // callback returns index automatically
+          navigationController.selectedIndex.value = index;
 
-      // defines navigation logic based on destination index
-      onDestinationSelected: (int index) { // callback returns index automatically
-        if (index == 0) { // id index of selected destination = 0, navigates to HomeScreen
-          Get.toNamed('/');
-        } else if (index == 1) { // id index of selected destination = 1, navigates to ViewScreen
-          Get.toNamed('/all');
-        }
-      },
+          if (index == 0) {
+            // id index of selected destination = 0, navigates to HomeScreen
+            Get.toNamed('/');
+          } else if (index == 1) {
+            // id index of selected destination = 1, navigates to ViewScreen
+            Get.toNamed('/all');
+          }
+        },
 
-      destinations: const <Widget>[
-        NavigationDestination( // index 0
-          selectedIcon: Icon(Icons.home_outlined),
-          icon: Icon(Icons.home_outlined),
-          label: 'Home',
+        destinations: const <Widget>[
+          NavigationDestination(
+            // index 0
+            selectedIcon: Icon(Icons.auto_graph_sharp),
+            icon: Icon(Icons.auto_graph_sharp),
+            label: 'Progress',
           ),
-        NavigationDestination( // index 0
-          selectedIcon: Icon(Icons.list),
-          icon: Icon(Icons.list),
-          label: 'All',
+          NavigationDestination(
+            // index 0
+            selectedIcon: Icon(Icons.create),
+            icon: Icon(Icons.create),
+            label: 'Log Book',
           ),
-      ],
+        ],
+
+        selectedIndex:
+            navigationController
+                .selectedIndex
+                .value, // tells navigation bar to use the selected index
+        // labelBehavior: onlyShowSelected,
+
+        // selectedIndex needed to control tab behaviour
+      ),
     );
-
   }
 }

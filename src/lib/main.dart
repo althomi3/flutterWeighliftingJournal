@@ -19,6 +19,10 @@ import 'widgets/edit_screen.dart';
 //Controller Imports
 import 'controllers/form_controller.dart';
 import 'controllers/dashboard_controller.dart';
+import 'controllers/navigation_controller.dart';
+
+// Model Imports
+import 'models/models.dart';
 /// // ...
 
 
@@ -37,6 +41,8 @@ Future <void> main() async {
   await Hive.openBox("storage");
   Get.lazyPut<FormController>(() => FormController()); // registers controller for form
   Get.lazyPut<DashboardCardController>(()=>DashboardCardController()); // registers controller for statistics
+  Get.lazyPut<NavigationController>(()=>NavigationController()); // registers controller for navigation
+  
   runApp(const MyApp());
 }
 

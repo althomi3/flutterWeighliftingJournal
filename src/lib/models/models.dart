@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class LiftingSet {
   final String id;
   final String exercise;

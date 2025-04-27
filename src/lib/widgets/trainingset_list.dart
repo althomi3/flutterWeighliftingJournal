@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import '../controllers/form_controller.dart';
 import 'package:get/get.dart';
 import '../custom_styles.dart';
-import 'custom_card.dart';
+import 'molecules/custom_card_small.dart';
+import 'empty_state.dart';
 
 class FormListWidgetSmall extends StatelessWidget {
   final formController = Get.find<FormController>();
@@ -11,9 +12,8 @@ class FormListWidgetSmall extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => formController.size == 0
-          ? Text('No sets')
-          : 
-            ListView(
+          ? EmptyStateWidget() // custom widget that supports user to start tracking
+          : ListView(
               scrollDirection: Axis.vertical,
                 children: formController.liftingsets.reversed
                     .map(
@@ -24,10 +24,12 @@ class FormListWidgetSmall extends StatelessWidget {
                         paramReps: Text('Reps: ${liftingset.reps}'), 
                         paramWeight: Text('Weight (kg): ${liftingset.weight}'), 
                         paramNotes: Text('Personal notes: ${liftingset.notes}'),
-                        onEdit: () => Get.toNamed("/edit/${liftingset.id}"),  // Navigate to edit screen
+                        onEdit: () => Get.toNamed("/edit/${liftingset.id}", arguments: liftingset),  // Navigate to edit screen
                         onDelete: () { 
                           formController.delete(liftingset);  // Call delete function
                         },
+                        buttonDeleteText: "Delete",
+                        buttonEditText: "Edit",
                         ),
                         ).toList(),
                     ),
@@ -42,7 +44,7 @@ class FormListWidgetMedium extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => formController.size == 0
-          ? Text('No sets')
+          ? EmptyStateWidget() // custom widget that supports user to start tracking
           : ListView(
               scrollDirection: Axis.vertical,
                 children: formController.liftingsets
@@ -118,7 +120,7 @@ class FormListWidgetLarge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => formController.size == 0
-          ? Text('No sets')
+          ? EmptyStateWidget() // custom widget that supports user to start tracking
           : ListView(
               scrollDirection: Axis.vertical,
                 children: formController.liftingsets
