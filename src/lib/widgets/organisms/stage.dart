@@ -1,8 +1,8 @@
     
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../custom_styles.dart';
-import 'add_elevated_button.dart';
+import '../../custom_styles.dart';
+import '../atoms/add_elevated_button.dart';
 import 'package:get/get.dart';
 
 // Stage widget
@@ -58,7 +58,8 @@ class StageWidget extends StatelessWidget{
                                 width: double.infinity,
                                 child: CustomElevatedButton(
                                   onSubmit: () => Get.toNamed("/create"), 
-                                  content: Text("Start tracking")),
+                                  content: Text("Start tracking", style: TextStyle(color: Style.fontColorLight),),
+                                  ),
                                 ),           
                 ],
               ),

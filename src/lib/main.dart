@@ -2,7 +2,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:src/custom_styles.dart';
-import 'package:src/widgets/create_screen.dart';
+import 'package:src/widgets/organisms/create_screen.dart';
 import 'package:src/widgets/view_screen.dart';
 import 'package:get/get.dart';
 import 'dart:ui';
@@ -12,8 +12,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 // Widget Imports
-import 'widgets/home_screen.dart';
-import 'widgets/edit_screen.dart';
+import 'widgets/organisms/home_screen.dart';
+import 'widgets/organisms/edit_screen.dart';
 
 
 //Controller Imports
@@ -69,8 +69,6 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255), // screen background
         colorScheme: ColorScheme.light(
-          primary: const Color.fromARGB(255, 255, 255, 255), // buttons, AppBars, accents
-          onPrimary: const Color.fromARGB(255, 255, 255, 255), // text on primary buttons
           secondary: Colors.black, // secondary color (not super important here)
           onSecondary: Colors.white,
           surface: Colors.white,

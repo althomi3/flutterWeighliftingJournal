@@ -16,10 +16,13 @@ class EditButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onEdit,
-      style: Style.secondaryButtonStyle,
-      child: Text(buttonEditText),
+    return SizedBox(
+      width: Style.widthButtonXS,
+      child: ElevatedButton(
+        onPressed: onEdit,
+        style: Style.secondaryButtonStyle,
+        child: Text(buttonEditText, style: TextStyle(color: Style.fontColorDark, fontWeight: FontWeight.bold)),
+      ),
     );
   }
 }

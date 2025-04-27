@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import '../atoms/edit_button.dart';
 import '../atoms/delete_button.dart';
-import '../../models/models.dart';
-
-
+import '../../custom_styles.dart';
 
 class CardSmall extends StatelessWidget {
   final Widget title;
@@ -17,7 +15,7 @@ class CardSmall extends StatelessWidget {
   final String buttonEditText;
   final String buttonDeleteText;
 
-  CardSmall({
+  const CardSmall({
     super.key,
     required this.title,
     required this.paramLiftingset,
@@ -30,8 +28,6 @@ class CardSmall extends StatelessWidget {
     required this.onDelete,
     required this.editView,
   });
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -48,19 +44,27 @@ class CardSmall extends StatelessWidget {
             ),
           ),
           if (!editView)
-            Row(
+          Padding(
+            padding: EdgeInsets.all(Style.insetXS),
+            child: Row(
               // aligns buttons horizontally
               mainAxisAlignment:
                   MainAxisAlignment.start, // aligns button to right of card
               children: [
-                EditButton(
-                  onEdit: onEdit, 
-                  buttonEditText: buttonEditText),
-                DeleteButton(
-                  onDelete: onDelete, 
-                  buttonDeleteText: buttonDeleteText)
+                Padding(
+                  padding: EdgeInsets.all(Style.insetXXXS), 
+                  child: EditButton(onEdit: onEdit, buttonEditText: buttonEditText),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(Style.insetXXXS), 
+                  child: DeleteButton(
+                  onDelete: onDelete,
+                  buttonDeleteText: buttonDeleteText,
+                  ),
+                ),              
               ],
             ),
+            ),          
         ],
       ),
     );

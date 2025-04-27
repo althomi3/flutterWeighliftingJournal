@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:src/custom_styles.dart';
 import '../atoms/edit_button.dart';
 import '../atoms/delete_button.dart';
 
@@ -14,7 +15,7 @@ class CardMedium extends StatelessWidget {
   final String buttonEditText;
   final String buttonDeleteText;
 
-  CardMedium({
+  const CardMedium({
     super.key,
     required this.title,
     required this.paramLiftingset,
@@ -52,29 +53,23 @@ class CardMedium extends StatelessWidget {
             flex: 3,
             child: Align(
               alignment: Alignment.topRight,
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: EditButton(
-                          onEdit: onEdit,
-                          buttonEditText: buttonEditText,
-                        ),
+              child: Padding(
+                padding: EdgeInsets.all(Style.insetXS),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(Style.insetXS),
+                      child: EditButton(
+                        onEdit: onEdit,
+                        buttonEditText: buttonEditText,
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: DeleteButton(
-                          onDelete: onDelete,
-                          buttonDeleteText: buttonDeleteText
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                    ),
+                    DeleteButton(
+                      onDelete: onDelete,
+                      buttonDeleteText: buttonDeleteText,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
