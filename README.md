@@ -1,8 +1,12 @@
 # Flutter Weighlifting Journal
 This is a mobile app developed with Flutter. The main use case is to add and view weightlifting sets to track progress.
 
+# How to run the the app
+...
+
 # Assignment Requirements
 ## Clear Purpose
+Building muscle strength for female climbers.
 This app is build to support building muscle. Other training apps which overload users with tracking options and o not provide guidance towards specific training goals. This app focuses specifically on muscle growth through hypertrophy which is an established scientifically supported mechanism to grow muscle. It focuses on tracking training parameters which are then used to display statistics to the user that help monitoring the training volumne (reps x weight). Volumne is one of the key drivers for hypertrophy. Hypertrophy is the professional term that describes a muscle state where muscle growth > muscle breakdown.
 
 
@@ -50,6 +54,14 @@ The persistent data were implemented with a Hive storage by using hive_ce. Since
 - allow filtering
 - allow custom exercise types the user generates
 - provide data visualization for quick and understandable insights 
+- Standard UX improvements
+    - accessibility
+    - copywriting
+    - visual language 
+
+- Provide more educational support to help users get started
+    - provide explanations for different muscle groups
+    - provide video instructions and exercises for each muscle group 
 
 
 
@@ -68,6 +80,18 @@ Although the app is designed for mobile use, mouse interaction was enabled for a
 
 ## No separate service class 
 The data service is integrated in the form controller. Due to the simplicity of the data handling, the decision was made to keep everything in the form controller. If the app were to be expanded, it would be wise to separate concerns and isolate the data handling in an own service class and / or service file.
+
+## Navigation and Flow
+- automatic navigation after certain actions
+
+## ViewScreen
+- Cards are sorted so that newest entry is always on top
+
+## Responsive Illustration
+The visual is an svg to provide a high quality illustration. The illustration represents a climber so that the climber community as the target group can identify with the purpose of growing muscle strength. The illustration is responsive until it reached a defined maximum height to present infinite scaling.
+
+## Using Wrap
+-- 2 buttons on homescreen
 
 
 
