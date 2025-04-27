@@ -80,5 +80,4 @@ class DefaultFirebaseOptions {
     authDomain: 'muscle-growth-tracker-171aa.firebaseapp.com',
     storageBucket: 'muscle-growth-tracker-171aa.firebasestorage.app',
   );
-
 }

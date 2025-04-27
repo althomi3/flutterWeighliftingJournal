@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class LiftingSet {
   final String id;
   final String exercise;
@@ -8,7 +6,14 @@ class LiftingSet {
   final String weight;
   final String notes;
 
-  LiftingSet(this.id, this.exercise, this.liftingset, this.reps, this.weight, this.notes);
+  LiftingSet(
+    this.id,
+    this.exercise,
+    this.liftingset,
+    this.reps,
+    this.weight,
+    this.notes,
+  );
 
   // helps with debugging and understanding structure of liftingset
   // just set print(liftingset) somewhere else in code where you want to inspect the instance of LiftingSet you created
@@ -16,23 +21,22 @@ class LiftingSet {
   @override // overrides the default toString method
   String toString() {
     return 'LiftingSet(id: $id, reps: $reps, weight: $weight, exercise: $exercise)';
-    }
-
+  }
 
   Map toJson() => {
-        'id': id,
-        'exercise': exercise,
-        'set': liftingset,
-        'reps': reps,
-        'weight': weight,
-        'notes': notes,
-      };
+    'id': id,
+    'exercise': exercise,
+    'set': liftingset,
+    'reps': reps,
+    'weight': weight,
+    'notes': notes,
+  };
 
   /*factory Set.fromJson(Map json) {
     return Set(json['exercise'], json['set'], json['reps'], json['weight'], json['notes']);
   }*/
 
-  // this helps parsing the data in the expected format. when running the app in the browser, 
+  // this helps parsing the data in the expected format. when running the app in the browser,
   // the code snippet above is sufficient as the data is serialized and parsed differently in the browser
   // in the local mac runtime, there were issues with how the OS unpacked the JSON data
   factory LiftingSet.fromJson(Map json) {
