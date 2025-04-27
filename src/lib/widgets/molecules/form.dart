@@ -6,21 +6,18 @@ import '../atoms/add_elevated_button.dart';
 import '../../models/models.dart';
 import '../../controllers/form_controller.dart';
 import '../../controllers/dashboard_controller.dart';
+import '../../controllers/navigation_controller.dart';
 
 class FormWidget extends StatelessWidget {
   final _formKey = GlobalKey<FormBuilderState>();
-  final formController =
-      Get.find<FormController>(); // initializes FormController
-  final dashboardCardController =
-      Get.find<
-        DashboardCardController
-      >(); // initializes DashboardController which contains function to calculate statistics
-  bool
-  isEditScreen; // sets bool var which is later used to control different content in the form depending on whether the user is in EditScreen or ViewScreen
+  final formController =Get.find<FormController>(); // initializes FormController
+  final dashboardCardController =Get.find<DashboardCardController>(); // initializes DashboardController which contains function to calculate statistics
+  final navigationController = Get.find<NavigationController>(); // needed to update the selectedIndex when user gets navigated to ViewScreen after submit. otherwise, tab in navbar does not update accordingly
+
+  bool isEditScreen; // sets bool var which is later used to control different content in the form depending on whether the user is in EditScreen or ViewScreen
   final LiftingSet?
   liftingsetToEdit; // initializes data set, used to retrieve specific data set in EditScreen vs list of entries in ViewScreen
-  RxList get liftingsets =>
-      formController.liftingsets; // getter gets RxList liftingsets
+  RxList get liftingsets =>formController.liftingsets; // getter gets RxList liftingsets
 
   FormWidget({
     super.key,
@@ -65,6 +62,7 @@ class FormWidget extends StatelessWidget {
       dashboardCardController.calculateVolumeForExercise(liftingsets, 'back');
       dashboardCardController.calculateVolumeForExercise(liftingsets, 'arms');
 
+      navigationController.selectedIndex.value = 1; // updates the index so that navigation bar highlights correct tab
       Get.toNamed('/all');
     }
   }
