@@ -62,7 +62,7 @@ class StageWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "You don't need to look like Hercules to be strong. The Climbing Strength Tracker helps you grow your body strength with targeted weight lifting.",
+                          "You don't need to look like Hercules to be strong. The Climbing Strength Builder helps you grow your body strength with targeted weight lifting.",
                           style: TextStyle(
                             fontSize: Style.fontTextM,
                             height: 1.2,
