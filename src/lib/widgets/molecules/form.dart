@@ -7,6 +7,8 @@ import '../../models/models.dart';
 import '../../controllers/form_controller.dart';
 import '../../controllers/dashboard_controller.dart';
 import '../../controllers/navigation_controller.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
+
 
 class FormWidget extends StatelessWidget {
   final _formKey = GlobalKey<FormBuilderState>();
@@ -87,10 +89,13 @@ class FormWidget extends StatelessWidget {
                   DropdownMenuItem(value: 'arms', child: Text('Arms')),
                 ],
                 hint: Text('Muscle Group'),
-
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   helperText: 'Which muscles does your exercise mainly target?',
+                ),
+                autovalidateMode: AutovalidateMode.disabled, // adds validator
+                validator: FormBuilderValidators.compose( // adds validator for required field
+                  [FormBuilderValidators.required(),], // adds validator that sets field as required, no data type validator needed on dropdown
                 ),
               ),
             ),
@@ -110,9 +115,12 @@ class FormWidget extends StatelessWidget {
                   border: OutlineInputBorder(),
                   helperText: 'Which set are your on?',
                 ),
+                autovalidateMode: AutovalidateMode.disabled, // adds validator
+                validator: FormBuilderValidators.compose( // adds validator for required field
+                  [FormBuilderValidators.required(),], // adds validator that sets field as required, no data type validator needed on dropdown
+                ),
               ),
             ),
-
             Padding(
               padding: EdgeInsets.all(Style.insetXXXS),
               child: FormBuilderDropdown(
@@ -139,6 +147,10 @@ class FormWidget extends StatelessWidget {
                   border: OutlineInputBorder(),
                   helperText: 'How many reps did you do in this set?',
                 ),
+                autovalidateMode: AutovalidateMode.disabled, // adds validator
+                validator: FormBuilderValidators.compose( // adds validator for required field
+                  [FormBuilderValidators.required(),], // adds validator that sets field as required, no data type validator needed on dropdown
+                ),
               ),
             ),
             Padding(
@@ -150,6 +162,10 @@ class FormWidget extends StatelessWidget {
                   border: OutlineInputBorder(),
                   helperText:
                       'How much weight did you use in this set, e.g., 3.25?',
+                ),
+                autovalidateMode: AutovalidateMode.disabled, // adds validator
+                validator: FormBuilderValidators.compose( // adds validator for required field
+                  [FormBuilderValidators.required(),], // adds validator that sets field as required, no data type validator needed on dropdown
                 ),
               ),
             ),

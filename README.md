@@ -62,6 +62,7 @@ The persistent data were implemented with a Hive storage by using hive_ce. Since
 Navigation is kept minimalistic and actions are designed to serve the main goal of the user: tracking training sets.
 Navigation icons and labels are chosen to support the understanding of the usage of each view. It is semantically goal-focused: understanding progress and logging activities.
 The screens contain instructive elements which support the user in understanding how the app and the current step work.
+Form validators.
 
 An empty state of the ViewScreen helps the user understand what to do and what they will see once they started tracking.
 
@@ -86,6 +87,8 @@ An empty state of the ViewScreen helps the user understand what to do and what t
 - Improved form functionality: 
     - additional form validators can help users enter useful data.
     - on edit, the form is pre-filled with user data and user can simply only adapt the fields they want to edit
+
+- Advanced custom form validator for double (weight) and parse comma entries as dot entries for correct calculations.
 
 
 

@@ -82,13 +82,11 @@ class MyApp extends StatelessWidget {
           onSurface: Colors.black,
         ),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(
-            255,
-            27,
-            28,
-            27,
-          ), // AppBar background color
+          backgroundColor: Color.fromARGB(255, 27, 28,27,), // AppBar background color
           titleTextStyle: TextStyle(color: Colors.white),
+          iconTheme: IconThemeData(
+            color: Colors.white, // <-- this changes the back arrow color
+          ),
           // AppBar text color
         ),
         navigationBarTheme: const NavigationBarThemeData(

@@ -24,7 +24,6 @@ class Style {
   static final label = 12.0;
 
   // colors
-
   static final colorFillPrimary = const Color.fromARGB(255, 207, 234, 225);
   static final colorFillSecondary = const Color.fromARGB(223, 221, 253, 247);
   static final colorFillTertiary = const Color.fromARGB(247, 247, 251, 251);

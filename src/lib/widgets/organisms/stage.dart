@@ -41,7 +41,7 @@ class StageWidget extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Text(
-                  "Build True Climbing Strength With Weight Lifting",
+                  "Build True Climbing Strength with Weight Lifting",
                   style: TextStyle(fontSize: Style.fontH1, height: 1.2),
                 ),
               ),

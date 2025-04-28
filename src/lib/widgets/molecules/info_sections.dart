@@ -21,7 +21,7 @@ class InfoSectionWidgetMuscles extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(bottom: Style.insetXS),
             child: Text(
-              "There are hundreds of exercises which can be varied to target specific muscle groups. For example, you can do a Bulgarian Split Squat so that you target your quadriceps (your upper leg) or your glutes just by splightly adjusting the angle of your upper body during the movement.",
+              "There are hundreds of exercises which can be varied to target specific muscle groups. For example, you can do a Bulgarian Split Squat so that you target your quadriceps (your upper leg) or your glutes just by slightly adjusting the angle of your upper body during the movement.",
               style: TextStyle(fontSize: Style.fontTextM),
             ),
           ),
@@ -50,18 +50,17 @@ class InfoSectionWidgetVolume extends StatelessWidget {
             "How the Training Works",
             style: TextStyle(fontSize: Style.fontH1),
           ),
-
           Padding(
             padding: EdgeInsets.only(bottom: Style.insetXS),
             child: Text(
-              "There is a lot of wisdom out there what builds strength. Let's not get lost in finding the perfect amount of repitions or weight. Eventually it comes down to the volume you move with a muscle group.",
+              "There is a lot of wisdom out there about what builds strength. Let's not get lost in finding the perfect amount of repitions or weight. Eventually it comes down to the volume you move with a muscle group.",
               style: TextStyle(fontSize: Style.fontTextM),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(bottom: Style.insetXXS),
             child: Text(
-              "Muscle strength = volume",
+              "Muscle Strength = Volume",
               style: TextStyle(
                 fontSize: Style.fontTextM,
                 fontStyle: FontStyle.italic,
@@ -81,18 +80,7 @@ class InfoSectionWidgetVolume extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(bottom: Style.insetXS),
             child: Text(
-              "Example for Glutes: 450 kg = 30 reps x 15 kg",
-              style: TextStyle(
-                fontSize: Style.fontTextM,
-                fontStyle: FontStyle.italic,
-              ),
-            ),
-          ),
-
-          Padding(
-            padding: EdgeInsets.only(bottom: Style.insetXS),
-            child: Text(
-              "For example: In your training this week, you did an exercise for your glutes. The type of exercise doesn't matter. You could have done classic squats with a barbell or used a hip thrust machine at your gym. You did 3 sets with 10 repitions each = 30 repititions. You used 15kg consistently in all sets. That makes 30 repititions x 15kf = 450 kg volume",
+              "For example: In your training this week, you targeted your glutes. The type of exercise doesn't matter. You could have done classic squats with a barbell or used a hip thrust machine at your gym. Let's say you did 3 sets with 10 repitions each = 30 repititions. You used 15 kg consistently in all sets. That makes 30 repititions x 15 kg = 450 kg volume",
               style: TextStyle(fontSize: Style.fontTextM),
             ),
           ),

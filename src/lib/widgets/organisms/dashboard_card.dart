@@ -48,6 +48,13 @@ class DashboardCardWidget extends StatelessWidget {
                   ),
                 ),
                 Text(
+                  'info: Compound exercises target multiple muscle groups.',
+                  style: TextStyle(
+                    fontSize: Style.label,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                Text(
                   'info: We calculate the overall average volume based on all sets across all muscle groups.',
                   style: TextStyle(
                     fontSize: Style.label,

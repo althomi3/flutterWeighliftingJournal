@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                     child: PromoCardWidget(
                       title: "📣 Coming Soon: Exercise Guide",
                       subtitle:
-                          "Find exercises that you like and that build strength the strength you want.",
+                          "Find exercises you like and that build the strength you want.",
                     ),
                   ),
                   Padding(
