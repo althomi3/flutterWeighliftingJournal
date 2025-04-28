@@ -63,6 +63,7 @@ Navigation is kept minimalistic and actions are designed to serve the main goal 
 Navigation icons and labels are chosen to support the understanding of the usage of each view. It is semantically goal-focused: understanding progress and logging activities.
 The screens contain instructive elements which support the user in understanding how the app and the current step work.
 Form validators.
+App title in browser tab.
 
 An empty state of the ViewScreen helps the user understand what to do and what they will see once they started tracking.
 
@@ -122,6 +123,9 @@ The visual is an svg to provide a high quality illustration. The illustration re
 
 ## Using Wrap
 -- 2 buttons on homescreen
+
+## Widget Architecture in Code Base with Atomic Design
+---
 
 # Limitations and Learnings
 ## Model for Training Set Entries

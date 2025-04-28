@@ -42,18 +42,20 @@ class DashboardCardController {
     //print('Sum Reps: $sumReps');
     double avgReps = sumReps / repsList.length;
     //print('Avg reps: $avgReps');
-
-    final weightList =
-        liftingsets.map((e) => int.tryParse(e.weight) ?? 0).toList();
+    
+    final weightList = liftingsets.map((e) => double.tryParse(e.weight) ?? 0).toList();
     if (repsList.isEmpty || weightList.isEmpty) {
       volume = 0.0.obs; // If no sets found for the exercise, set volume to 0
       return 0.0;
     }
 
-    int sumWeight = weightList.reduce((a, b) => a + b);
+    double sumWeight = weightList.reduce((a, b) => a + b);
     double avgeWeight = sumWeight / weightList.length;
+
     volume.value = avgReps * avgeWeight;
-    return volume.value;
+    double roundedVolumeAll = double.parse(volume.toStringAsFixed(2));
+    volume.value = roundedVolumeAll;
+    return roundedVolumeAll;
   }
 
   double calculateVolumeForExercise(RxList liftingsets, String exerciseType) {

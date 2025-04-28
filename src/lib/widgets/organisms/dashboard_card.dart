@@ -48,13 +48,6 @@ class DashboardCardWidget extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'info: Compound exercises target multiple muscle groups.',
-                  style: TextStyle(
-                    fontSize: Style.label,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-                Text(
                   'info: We calculate the overall average volume based on all sets across all muscle groups.',
                   style: TextStyle(
                     fontSize: Style.label,
@@ -99,12 +92,22 @@ class DashboardCardWidget extends StatelessWidget {
                 ),
                 SizedBox(height: Style.insetS),
                 Text(
-                  'info: Average volume for each muscle group based on your tracked sets.',
+                  'info: Compound exercises target multiple muscle groups.',
                   style: TextStyle(
                     fontSize: Style.label,
                     fontStyle: FontStyle.italic,
                   ),
                 ),
+                Padding(
+                padding: EdgeInsets.only(top: Style.insetXXS),
+                child: Text(
+                  'info: We calculate the average volume for each muscle group based on your tracked sets.',
+                  style: TextStyle(
+                    fontSize: Style.label,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                ),  
               ],
             ),
           ),
