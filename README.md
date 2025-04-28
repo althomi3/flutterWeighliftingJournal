@@ -91,6 +91,12 @@ An empty state of the ViewScreen helps the user understand what to do and what t
 
 - Advanced custom form validator for double (weight) and parse comma entries as dot entries for correct calculations.
 
+- App already teasers a exercise guide: this guide would provide exercise variants based on muscle group. 
+- App already teaseres a visual dashboard which can help assess progress on a timeline. 
+- Allow for advanced muscle group selection. E.g. a dropdown for big muscle group and a dropdown with sub muscle groups.
+- Options to save muscle groups to avoid repetitive entries.
+- Time-based entries and advanced layout structure of list based on time. E.g. grouping by month. 
+
 
 
 # Implementation Decisions
