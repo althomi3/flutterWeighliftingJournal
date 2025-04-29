@@ -1,13 +1,13 @@
 # Flutter App: Muscle Strength Tracker for Female Climbers
 This is a mobile app developed with Flutter. The main purpose is to support female climbers growing body strength through tracking their muscle-targeted weight lifting. The app focuses on hobby climbers who have a basic understanding of exercising.
 
-# How to Run the App and Understand the Widget Hierarchy
-## Atomic Design
-The widget folder is structured following the atomic design approach. It categoirzed the widgets according to their complexity, e.g., molcules for simpler widgets or organism for views that integrate mutliple widgets.
-## Run the App
-The app is available under the folllwing URL: TBA
-It is best to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. Adjust your browser window or choose the device demo in your browser's dev tools.
+## How to Run the App
+The app is available under the folllwing URL: https://muscle-growth-tracker-171aa.web.app/
+It is recommended to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. For testing responsitivity, it is recommended to use the dev tools in your browser.
 If you want to run the app via code, navigate to the src folder and start the app with <flutter run>.
+
+## Widget Code Structure with Atomic Design
+The widget folder is structured following the atomic design approach by Brad Frost. Widgets are categorized according to their component complexity, e.g., molcules for simpler widgets or organism for views that integrate mutliple widgets.
 
 # Assignment Requirements
 ## Clear Purpose
