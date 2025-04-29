@@ -1,27 +1,27 @@
-# Flutter App: Muscle Strength Tracker for Female Climbers
+# Flutter App: Muscle Strength Tracker for Female Climbers check
 This is a mobile app developed with Flutter. The main purpose is to support female climbers growing body strength through tracking their muscle-targeted weight lifting. The app focuses on hobby climbers who have a basic understanding of exercising.
 
-## How to Run the App
+## How to Run the App check
 The app is available under the folllwing URL: https://muscle-growth-tracker-171aa.web.app/
 It is recommended to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. For testing responsitivity, it is recommended to use the dev tools in your browser.
 If you want to run the app via code, navigate to the src folder and start the app with <flutter run>.
 The source code and a rendered version of the Readme are available on Github: https://github.com/althomi3/flutterWeighliftingJournal/settings
 
-## Widget Code Structure with Atomic Design
+## Widget Code Structure with Atomic Design check
 The widget folder is structured following the atomic design approach by Brad Frost. Widgets are categorized according to their component complexity, e.g., molcules for simpler widgets or organism for views that integrate mutliple widgets.
 
 # Assignment Requirements
-## Clear Idea and Purpose
+## Clear Idea and Purpose check
 In today's Fitfluencer fog, it is challenging to understand how to train effectively for one's individual goals. In addition, sport apps often overload users with mainstream options and lack of intentional guidance.
 
-The idea and purpose of this app is to support female amateur climbers growing body strength through intentional, muscle-targeted weight lifting. The goal is achieved by educational elements, a training tracker which focuses on muscle instead of exercise as well as statictics focusing on training volume per muscle group.
+The idea and purpose of this app is to support female amateur climbers growing body strength through intentional, muscle-targeted weight lifting. The goal is achieved by educational elements, a training tracker which focuses on muscle instead of exercise as well as statistics focusing on training volume per muscle group.
 
-The app supports intentional training to build strength over form or muscle mass. The focus group of female climbers was chosen because there are a lot of stereotypes about the need for looking muscled-up in climbing. However, looking muscled-up is not a reliable indicator for strength. Due to this glass barrier, female climbers often plateau and believe they cannot get better without looking pumped or simply won't be able to gain the required strength at all and loose interest.
-Especially the educational components in the app help to understand advantages of the female body when it comes to strength and guide female climbers to set a healthy focus on themselfes. The statistics help to make progress in building strength visible.
+The app supports intentional training to build strength over form or muscle mass. The focus group of female climbers was chosen because there are a lot of stereotypes about the need for looking muscled-up in climbing. However, looking muscled-up is not a reliable indicator for strength. Due to this glass barrier, female climbers often plateau and believe they cannot get better without looking pumped or simply won't be able to gain the required strength at all and lose interest.
+Especially the educational components in the app help to understand advantages of the female body when it comes to strength and guide female climbers to set a healthy focus on themselves. The statistics help to make progress in building strength visible.
 
-The focus on muscle training volume, which is the number of repititions * weight, was chosen as it is one key factor in building muscle strength. It focuses on achieving hypertrophy which describes the state of muscle growth > muscle breakdown. In addition, training volume provides the freedom to design the training for individual needs when it comes to weight and repitions as the same training volume can be achieved through various combinations. E.g., less weight and more reps or more weight and less reps. This makes training fit different time availabilities and personal preferences. More details can be found in the app.
+The focus on muscle training volume, which is the number of repititions * weight, was chosen as it is one key factor in building muscle strength. It focuses on achieving hypertrophy which describes the state of muscle growth > muscle breakdown. In addition, training volume provides the freedom to design the training for individual needs when it comes to weight and repititions as the same training volume can be achieved through various combinations. E.g., less weight and more reps or more weight and less reps. This makes training fit different time availabilities and personal preferences. More details can be found in the app.
 
-The idea and purpose are supported by the theme and visual language. It keeps a balance between a fresh and relaxed style especially through green mint colors and friendly, yet activating illustrations. At the same time, the dark aspects add a certain sport and and ambition factor. In addition, the visual style is present in both worlds, the gym world (often darker and black) and the climbing world (nature-driven and colorful/green).
+The idea and purpose are supported by the theme and visual language. It keeps a balance between a fresh and relaxed style especially through green mint colors and friendly, yet activating illustrations. At the same time, the dark aspects add a certain sport and ambition factor. In addition, the visual style is present in both worlds, the gym world (often darker and black) and the climbing world (nature-driven and colorful/green).
 
 
 ## Architecture: 4 Screens and CRUD Pattern
@@ -64,13 +64,15 @@ When running the app with the local machine, e.g., MacOS, the data is treated as
 The persistent data were implemented with a Hive storage by using hive_ce. Since browsers like Chrome treat data a bit differently, the persistent state is not visible when you run the app with a browser such as Chrome.
 
 ## Easy to use and intuitive
-Navigation is kept minimalistic and actions are designed to serve the main goal of the user: tracking training sets.
-Navigation icons and labels are chosen to support the understanding of the usage of each view. It is semantically goal-focused: understanding progress and logging activities.
-The screens contain instructive elements which support the user in understanding how the app and the current step work.
-Form validators.
-App title in browser tab.
+There were multiple measures taken to make the app easy to use. Some examples are:
 
-An empty state of the ViewScreen helps the user understand what to do and what they will see once they started tracking.
+- Navigation in the navigation bar contains the major areas users navigate between. Other navigation actions are embedded in the user flow within the screens. This supports a navigation that fits to the user scenario. Overall, the navigation objective is to guide the user towards the mail goal: tracking a training set. In addition, automatic navigation has been implemented after certain steps, e.g., navigating the user to a screen where they see the submitted form entry.
+- Navigation icons and labels are chosen to support the understanding of the usage of each view. 
+Button sizes sizes and font styles are designed to represent a helpful information and action hierarchy which supports the user in intentonal app understanding.
+- An empty state is used including visual support and copy that help users getting kickstarted adding content.
+- The screens contain contextual elements which support the user in understanding how the app and the current step work.
+- Form validators support the user in submitting data efficiently.
+- The browser tab contains the app title for recognizability between other tabs.
 
 ## Outlook and Improvement Opportunities
 - add time and date perspective
