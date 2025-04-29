@@ -44,17 +44,17 @@ Delete: The ViewScreen contains functionality to delete an entry.
 ## Max Width
 The main use case of the app is mobile and design focus is for mobile use. Still, weightlifters might want to review their progress at home on their laptop. Therefore, the max width is set to 1200 following the common breakpoint definition for laptop devices by W3C (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
 
-## Breakpoints and Responsive Widget
-Min 2 breakpoints are required which trigger changes in the interface behaviour. The W3C definition for device breakpoints is used as a reference (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
+## Responsive: Breakpoints and Responsive Widget
+Two breakpoints were introduced following the W3C standards (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
 
-Breakpoint 1: 600 px (max width for extra small devices, min width for small devices like smartphones)
-Breakpoint 2: 768 px (min width for medium devices such as landscape tablets)
+- Breakpoint 1: 600 px (max width for extra small devices, min width for small devices like smartphones)
+- Breakpoint 2: 768 px (min width for medium devices such as landscape tablets)
 
-The main use case for this app lies between the two breakpoints. Edge cases are devices < breakpoint 1 and > breakpoint 2. The breakpoints affect the display of the list of entries in the ViewScreen.
+The main use case for this app lies between the two breakpoints. Edge cases are devices < breakpoint 1 and > breakpoint 2. The breakpoints affect the action layout in the list of entries in the ViewScreen.
 
-The behaviour triggered by the breakpoints is defined via a generic responsive widget using the LayoutBuilder class. The generic responsive widget takes 3 widgets that are displayed depending on the parent widget width. In the app, the responsive widget is wrapped insides the Column of the MainLayout in the ViewScreen. Thereby, the widget's behaviour is controlled by the detected width of the MainLayout widget.
+The behaviour triggered by the breakpoints is defined through a generic responsive widget using the LayoutBuilder class. The generic responsive widget takes 3 widgets that are displayed depending on the parent widget width. In the app, the responsive widget is wrapped inside the Column of the MainLayout in the ViewScreen. Thereby, the widget's behaviour is controlled by the detected width of the MainLayout widget as its parent.
 
-Screens are set as scrollable with SingleChildScrollView to prevent overflowing content issues cause by narrow screens which might lengthen the content more than expected.
+In addition, screens are set as scrollable with SingleChildScrollView to prevent overflowing content issues caused by narrow screens.
 
 ## Statistics
 Homescreen: general volume and volume per muscle group -> serves app prupose to help guiding muscle growth over exercises
@@ -63,12 +63,12 @@ Homescreen: general volume and volume per muscle group -> serves app prupose to 
 When running the app with the local machine, e.g., MacOS, the data is treated as persistent. You can test this by running the app, adding some entries, closing and restarting the app. 
 The persistent data were implemented with a Hive storage by using hive_ce. Since browsers like Chrome treat data a bit differently, the persistent state is not visible when you run the app with a browser such as Chrome.
 
-## Easy to use and intuitive
+## Easy to Use and Intuitive check
 There were multiple measures taken to make the app easy to use. Some examples are:
 
-- Navigation in the navigation bar contains the major areas users navigate between. Other navigation actions are embedded in the user flow within the screens. This supports a navigation that fits to the user scenario. Overall, the navigation objective is to guide the user towards the mail goal: tracking a training set. In addition, automatic navigation has been implemented after certain steps, e.g., navigating the user to a screen where they see the submitted form entry.
+- Navigation in the navigation bar contains the major areas users navigate between. Other navigation actions are embedded in the user flow within the screens. This supports a navigation that fits to the user scenario. Overall, the navigation objective is to guide the user towards the main goal: tracking a training set. In addition, automatic navigation has been implemented after certain steps, e.g., navigating the user to a screen where they see the submitted form entry.
 - Navigation icons and labels are chosen to support the understanding of the usage of each view. 
-Button sizes sizes and font styles are designed to represent a helpful information and action hierarchy which supports the user in intentonal app understanding.
+Button sizes and font styles are designed to represent a helpful information and action hierarchy which supports the user in intentional app understanding.
 - An empty state is used including visual support and copy that help users getting kickstarted adding content.
 - The screens contain contextual elements which support the user in understanding how the app and the current step work.
 - Form validators support the user in submitting data efficiently.
