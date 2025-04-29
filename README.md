@@ -1,17 +1,17 @@
-# Flutter App: Muscle Strength Tracker for Female Climbers check
+# Flutter App: Muscle Strength Tracker for Female Climbers
 This is a mobile app developed with Flutter. The main purpose is to support female climbers growing body strength through tracking their muscle-targeted weight lifting. The app focuses on hobby climbers who have a basic understanding of exercising.
 
-## How to Run the App check
+## How to Run the App 
 The app is available under the following URL: https://muscle-growth-tracker-171aa.web.app/
 It is recommended to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. For testing responsiveness, it is recommended to use the dev tools in your browser.
 If you want to run the app via code, navigate to the src folder and start the app with <flutter run>.
 The source code and a rendered version of the Readme are available on Github: https://github.com/althomi3/flutterWeighliftingJournal/settings
 
-## Widget Code Structure with Atomic Design check
+## Widget Code Structure with Atomic Design 
 The widget folder is structured following the atomic design approach by Brad Frost. Widgets are categorized according to their component complexity, e.g., molecules for simpler widgets or organism for views that integrate multiple widgets.
 
 # Assignment Requirements
-## Clear Idea and Purpose check
+## Clear Idea and Purpose 
 In today's Fitfluencer fog, it is challenging to understand how to train effectively for one's individual goals. In addition, sport apps often overload users with mainstream options and lack of intentional guidance.
 
 The idea and purpose of this app is to support female amateur climbers growing body strength through intentional, muscle-targeted weight lifting. The goal is achieved by educational elements, a training tracker which focuses on muscle instead of exercise as well as statistics focusing on training volume per muscle group.
@@ -24,7 +24,7 @@ The focus on muscle training volume, which is the number of repetitions * weight
 The idea and purpose are supported by the theme and visual language. It keeps a balance between a fresh and relaxed style especially through green mint colors and friendly, yet activating illustrations. At the same time, the dark aspects add a certain sport and ambition factor. In addition, the visual style is present in both worlds, the gym world (often darker and black) and the climbing world (nature-driven and colorful/green).
 
 
-## Screen Architecture check
+## Screen Architecture 
 ### 1 Main Screen and 3 Sub Screens
 There are 4 distinct views as required in the assignment.
 1. HomeScreen (main screen and a destination in the navigation bar)
@@ -43,7 +43,7 @@ The screens contain content and functionality that follows the CRUD pattern as a
 
 - Delete: The ViewScreen contains functionality to delete an entry.
 
-## Responsive check
+## Responsive 
 ### Breakpoints
 Two breakpoints were introduced following the W3C standards (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp).
 
@@ -52,7 +52,7 @@ Two breakpoints were introduced following the W3C standards (https://www.w3schoo
 
 The main use case for this app lies between the two breakpoints. Edge cases are devices < breakpoint 1 and > breakpoint 2. The breakpoints affect the action layout in the list of entries in the ViewScreen.
 
-### Responsive Widget check
+### Responsive Widget 
 The behaviour triggered by the breakpoints is defined through a generic responsive widget using the LayoutBuilder class. The generic responsive widget takes 3 widgets that are displayed depending on the parent widget width. In the app, the responsive widget is wrapped inside the Column of the MainLayout in the ViewScreen. Thereby, the widget's behaviour is controlled by the detected width of the MainLayout widget as its parent.
 
 ### Flexible Scroll
@@ -64,13 +64,13 @@ The visuals are svg to provide a high quality illustration. The illustration sca
 ### Max Width
 The max width is set to 1200 following the common breakpoint definition for laptop devices by W3C (https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp). The reasoning is that users might want to review their progress at home on their laptop despite the main use case on mobile during the training session. 
 
-## Form and Persistent Data check
+## Form and Persistent Data 
 The app has a form for entering and manipulating data. The application remembers the entered data as form entries and statistics calculated based on the entries. The persistent data logic was implemented with a Hive storage.
 
-## Statistics check
+## Statistics 
 Based on the form entries, multiple calculations are conducted and presented as statistics in a dashboard to the user. Statistics are: overall average volume and average volume per muscle group which result in 6 individual measures. The dashboard serves the main goal of the app to build muscle strength by making progress visible.
 
-## Easy to Use and Intuitive check
+## Easy to Use and Intuitive 
 There were multiple measures taken to make the app easy to use. Some examples are:
 
 - Navigation in the navigation bar contains the major areas users navigate between. Other navigation actions are embedded in the user flow within the screens. This supports a navigation that fits to the user scenario. Overall, the navigation objective is to guide the user towards the main goal: tracking a training set. In addition, automatic navigation has been implemented after certain steps, e.g., navigating the user to a screen where they see the submitted form entry.
@@ -105,11 +105,6 @@ Although the app is designed for mobile use, mouse interaction was enabled for a
 ## No Separate Service Class 
 The data service is integrated in the form controller and a separate data model. Due to the simplicity of the data handling, the decision was made to not create a separate service. If the app were to be expanded, it would be wise to separate concerns and separate the data handling into its own service class.
 
-
-# Limitations and Learnings
-## Model for Training Set Entries
-It was attempted to create a model that represents the variables used for each form entry. However, due to more sophisticated handling of the card in the edit screen, working with the model escalated complexity to a level where the downsides overweighed the benefit. A learning is that there are limits of global handling in terms of complexity.
-
 ## Outlook and Improvement Opportunities
 Due to the limited scope of this project, there are improvement opportunities. Some examples are:
 
@@ -141,6 +136,9 @@ Due to the limited scope of this project, there are improvement opportunities. S
     - accessibility
     - copywriting
     - visual language 
+
+
+Credentials: Project in scope of the course Device-Agnostic Design at Aalto University, 2025, by Alischa Thomas
 
 
 
