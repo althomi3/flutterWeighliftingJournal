@@ -5,6 +5,7 @@ This is a mobile app developed with Flutter. The main purpose is to support fema
 The app is available under the folllwing URL: https://muscle-growth-tracker-171aa.web.app/
 It is recommended to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. For testing responsitivity, it is recommended to use the dev tools in your browser.
 If you want to run the app via code, navigate to the src folder and start the app with <flutter run>.
+The source code and a rendered version of the Readme are available on Github: https://github.com/althomi3/flutterWeighliftingJournal/settings
 
 ## Widget Code Structure with Atomic Design
 The widget folder is structured following the atomic design approach by Brad Frost. Widgets are categorized according to their component complexity, e.g., molcules for simpler widgets or organism for views that integrate mutliple widgets.
