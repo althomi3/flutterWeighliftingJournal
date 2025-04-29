@@ -11,13 +11,16 @@ The source code and a rendered version of the Readme are available on Github: ht
 The widget folder is structured following the atomic design approach by Brad Frost. Widgets are categorized according to their component complexity, e.g., molcules for simpler widgets or organism for views that integrate mutliple widgets.
 
 # Assignment Requirements
-## Clear Purpose
-Building muscle strength for female climbers.
-This app is build to support building muscle. Other training apps which overload users with tracking options and o not provide guidance towards specific training goals. This app focuses specifically on muscle growth through hypertrophy which is an established scientifically supported mechanism to grow muscle. It focuses on tracking training parameters which are then used to display statistics to the user that help monitoring the training volumne (reps x weight). Volumne is one of the key drivers for hypertrophy. Hypertrophy is the professional term that describes a muscle state where muscle growth > muscle breakdown.
+## Clear Idea and Purpose
+In today's Fitfluencer fog, it is challenging to understand how to train effectively for one's individual goals. In addition, sport apps often overload users with mainstream options and lack of intentional guidance.
 
-The theme and visual language connect to the target group of female climbers and support a clear understanding of the app purpose.
+The idea and prupose of this app is to support female climbers growing body strength through tracking their muscle-targeted weight lifting. The app focuses on hobby climbers who have a basic understanding of exercising. The goal is achieved by educational elements, a training tracker which focuses on muscle instead of exercise as well as statictics focusing on training volume per muscle group.
 
-The theme and visual language were chosen to keep a balance between a fresh and relaxed style especially through the green mint colors and the friendly illustrations. At the same time, the black aspects add a certain sportive and amd ambition factor. In addition, this combines common color themes used both in the gym world (often darker and black) and the climbing world (nature-driven and colorful).
+This supports a focus on building strength over form or muscle mass and helps users to train intentionally. The focus group of female climbers was chosen because there are a lot of stereotypes about the need for looking muscled-up in climbing over having strength which especially discriminates female climbers who are less likely to achieve the look of a muscled-up climber. Especially the educational components help to understand advantages of the female body when it comes to strength and guide female climbers to set a healthy focus on themselfes.
+
+The focus on muscle volume was chosen as it is scientifically shown to be a key factor in building muscle strength. It focuses on achieving hypertrophy which describes the state of muscle growth > muscle breakdown. In addition, volume provides the freedom to design the training for individual needs when it comes to weight and repitions as the same training volume can be achieved through various combinations (volume (kg) = repititions * weight). More details can be found in the app. Not everyone has the time to do 30 reps and not everyone likes to train with heavy weight.
+
+The idea and purpose are supported by the theme and visual language. It keeps a balance between a fresh and relaxed style especially through green mint colors and friendly, yet activating illustrations. At the same time, the dark aspects add a certain sport and amd ambition factor. In addition, the visual style is present in both worlds, the gym world (often darker and black) and the climbing world (nature-driven and colorful/green).
 
 
 ## Architecture: 4 Screens and CRUD Pattern
