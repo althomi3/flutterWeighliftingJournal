@@ -1,5 +1,5 @@
-# Flutter Weighlifting Journal
-This is a mobile app developed with Flutter. The main use case is to add and view weightlifting sets to track progress.
+# Flutter App: Muscle Strength Tracker for Female Climbers
+This is a mobile app developed with Flutter. The main purpose is to support female climbers growing body strength through tracking their muscle-targeted weight lifting. The app focuses on hobby climbers who have a basic understanding of exercising.
 
 # How to Run the App and Understand the Widget Hierarchy
 ## Atomic Design
