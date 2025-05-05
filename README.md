@@ -4,9 +4,13 @@ This is a mobile app developed with Flutter. The main purpose is to support fema
 ## How to Run the App 
 
 ### Access
+
 The app is available under the following URL: https://muscle-growth-tracker-171aa.web.app/
-It is recommended to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. For testing responsiveness, it is recommended to use the dev tools in your browser.
-If you want to run the app via code, navigate to the src folder and start the app with <flutter run>.
+
+It is recommended to open the app on a smartphone for best look and feel. The app is optimized for dimensions 390 x 844 which represents an iPhone 12 Pro. For testing app responsiveness, it is recommended to use the dev tools in a browser.
+
+If you want to run the app via your local IDE, navigate to the root folder and start the app with <flutter run>.
+
 The source code and a rendered version of the Readme are available on Github: https://github.com/althomi3/flutterWeighliftingJournal/settings
 
 ### Key Use Cases for Testing
