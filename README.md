@@ -13,6 +13,8 @@ It is recommended to open the app on a smartphone for best look and feel. The ap
 
 If you want to run the app via your local IDE, navigate to the root folder. Rename the "src" folder to "lib". Then start the app with "flutter run". If dependencies need to be updated, run "flutter pub get" and try restarting the app with "flutter run".
 
+If you miss a specific platform support, e.g., web, you can add support for all platforms by running "flutter create ." You can also add a specific platform support via "flutter create --platforms=web ." . Then retry opening the app with "flutter run". 
+
 ### Key Use Cases for Testing
 - navigate between both tabs in the navigation bar. In the log book you should see an empty state UI.
 - scroll through the home screen to understand educational and promotional components
